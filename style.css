@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -43,6 +45,7 @@ a {
   box-shadow: 0 0 15px 0 var(--light-purple);
   border-radius: 10px;
   font-weight: bold;
+  transition: all 100ms;
 }
 
 .menu-item:hover a {
@@ -91,4 +94,47 @@ a {
 
 #my-brief {
   background-color: #e5b8f4;
+}
+
+/* project types css */
+
+#project-type {
+  margin: 5vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-type-item {
+  border: 3px solid var(--light-purple);
+  box-shadow: 0 0 50px 0 var(--light-purple);
+  border-radius: 10px;
+  width: 15%;
+}
+
+.project-type-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#project-type:hover .project-type-item {
+  filter: grayscale(30%) opacity(50%);
+}
+
+.project-type-item:hover {
+  transform: scale(1.1);
+  transition: all 1000ms;
+  filter: opacity(100%) grayscale(0%) !important;
+}
+
+.project-type-btn {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  color: var(--light-purple);
+  font-family: "pacifico", sans-serif;
+  font-weight: 400;
+  font-size: 50px;
 }
