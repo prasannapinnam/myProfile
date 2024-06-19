@@ -104,8 +104,46 @@ document.addEventListener("DOMContentLoaded",() => {
         experienceCards.appendChild(card);
     }
 
-    //experience cards fillup end
+    //experience cards slider
+    let experienceSlider = [
+        {
+            image: 'zycusmonthlyaward1.png'
+        },
+        {
+            image:'zycusmontlyaward2.png'
+        }
+    ];
 
+    const nextCursor = document.querySelector('.next');
+    const prevCursor = document.querySelector('.prev'); 
+    const awardCard = document.querySelector('.award-card');
+
+    let currentIndex = 0;
+    awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
+
+    nextCursor.addEventListener('click',()=>{
+        if(currentIndex < experienceSlider.length-1){
+            currentIndex++;
+            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
+        }
+        else {
+            currentIndex = 0;
+            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
+        }
+        console.log(currentIndex);
+    })
+
+    prevCursor.addEventListener('click',()=>{
+        if(currentIndex > 0){
+            currentIndex--;
+            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
+        }
+        else {
+            currentIndex = experienceSlider.length-1;
+            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
+        }
+        console.log(currentIndex);
+    })
 
 })
 
