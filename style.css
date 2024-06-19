@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -10,12 +8,41 @@
   --page-background: #2d033b;
   --dark-purple: #810ca8;
   --light-purple: #e5b8f4;
+  --white-color: #ffffff;
+  --league-spartan: "League Spartan", sans-serif;
+  --libre-baskerville: "Libre Baskerville", sans-serif;
+  --boxes-shadow: 0 0 30px 0 var(--light-purple);
 }
 
 body {
   background-color: var(--page-background);
 }
 
+.section-margin {
+  margin: 120px 0;
+}
+
+.section-header {
+  font-family: var(--league-spartan);
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--light-purple);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cards-bg {
+  background-color: rgb(249, 248, 250, 0.2);
+  margin: 30px 7vw;
+  border-radius: 20px;
+  box-shadow: var(--boxes-shadow);
+  display: flex;
+  border: 2px solid var(--light-purple);
+  overflow: hidden;
+  position: relative;
+}
+
+/*navbar*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -26,6 +53,8 @@ nav {
 a {
   color: var(--light-purple);
   text-decoration: none;
+  font-family: var(--libre-baskerville);
+  font-weight: 600;
 }
 
 #my-icon img {
@@ -46,6 +75,7 @@ a {
   border-radius: 10px;
   font-weight: bold;
   transition: all 100ms;
+  font-size: 12px;
 }
 
 .menu-item:hover a {
@@ -62,6 +92,10 @@ a {
   box-shadow: 0 0 0 0;
 }
 
+/*navbar done*/
+
+/*about me section*/
+
 #about-me {
   position: relative;
   background-color: var(--light-purple);
@@ -76,7 +110,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 75%;
   margin-left: 8%;
 }
 
@@ -91,10 +125,111 @@ a {
 #myimages #img_small {
   height: 150px;
 }
+/*aboutme done*/
 
-#my-brief {
-  background-color: #e5b8f4;
+/*skills section*/
+
+.skill-cards-1,
+.skill-cards-2 {
+  align-items: center;
+  height: 70px;
 }
+
+.skill-card {
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  border: 2px solid var(--dark-purple);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+}
+
+.skill-card-left {
+  animation: moveLeft 9s linear infinite;
+  left: -15vw;
+}
+.skill-card-right {
+  animation: moveRight 7.7s linear infinite;
+  right: 110vw;
+}
+
+/* .card-100 {
+  background-image: url(./assets/images/skills-cards/karma.PNG);
+  background-size: 100%;
+} */
+
+@keyframes moveLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -150px;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -150px;
+  }
+}
+
+/*skill section done*/
+
+/*experience section*/
+
+.experience-cards {
+  flex-direction: column;
+}
+
+.experience-card {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.experience-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 200px;
+  width: 50%;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.experience-description {
+  width: 40%;
+  align-self: center;
+}
+
+.experience-heading {
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-family: var(--league-spartan);
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.experience-brief {
+  color: var(--light-purple);
+  font-family: var(--libre-baskerville);
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/*experience section done*/
 
 /* project types css */
 
@@ -134,7 +269,12 @@ a {
   text-align: center;
   padding: 20px;
   color: var(--light-purple);
-  font-family: "pacifico", sans-serif;
   font-weight: 400;
   font-size: 50px;
+}
+/*project types section done*/
+
+.mockup {
+  margin-left: 10vw;
+  width: 75vw;
 }
