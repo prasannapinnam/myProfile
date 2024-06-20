@@ -65,7 +65,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
+  width: 50%;
 }
 
 .menu-item {
@@ -124,6 +124,28 @@ a {
 
 #myimages #img_small {
   height: 150px;
+}
+
+.about-me-title {
+  color: var(--dark-purple);
+  font-size: 50px;
+  font-family: var(--league-spartan);
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  font-weight: 600;
+}
+
+.about-me-desc {
+  text-align: center;
+  width: 80%;
+  margin: 10px auto;
+  font-family: var(--libre-baskerville);
+  font-size: 22px;
+  line-height: 1.5;
+  font-style: italic;
+  color: var(--page-background);
+  font-weight: 550;
 }
 /*aboutme done*/
 
@@ -240,17 +262,17 @@ a {
   margin: 30px 7vw;
   display: flex;
   padding: 30px;
-  transition: transform 0.5s ease-in-out;
   height: 500px;
   justify-content: center;
   align-items: center;
   background-color: var(--dark-purple);
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 .award-card {
-  width: 60%;
+  width: 55%;
   border: 15px solid black;
   outline: 2px solid var(--white-color);
   background-size: 101%;
@@ -258,6 +280,9 @@ a {
   background-position: center center;
   height: 400px;
   border-radius: 20px;
+  flex-shrink: 0;
+  position: absolute;
+  opacity: 0;
 }
 
 .carousel-control {
@@ -283,7 +308,7 @@ a {
 /* project types css */
 
 #project-type {
-  margin: 5vw;
+  margin: 5vw 5vw 10vw 5vw;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -323,7 +348,57 @@ a {
 }
 /*project types section done*/
 
-.mockup {
-  margin-left: 10vw;
-  width: 75vw;
+/*featured projects*/
+#featured-projects {
+  position: relative;
+}
+
+.project-mockups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 550px;
+  width: 85%;
+  margin: 1vw auto 10vw auto;
+  overflow: hidden;
+}
+
+.project-mockup {
+  position: absolute;
+  width: 90%;
+  flex-shrink: 0;
+}
+
+.project-mockup img {
+  height: 100%;
+  width: 100%;
+}
+
+/*featured projects done*/
+
+/*footer*/
+footer {
+  background-color: var(--dark-purple);
+  color: var(--page-background);
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30vw;
+}
+
+.footer-logo img {
+  height: 200px;
+  align-self: flex-start;
+}
+
+.footer-links {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.fa-brands {
+  font-size: 50px;
 }

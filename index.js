@@ -104,47 +104,137 @@ document.addEventListener("DOMContentLoaded",() => {
         experienceCards.appendChild(card);
     }
 
-    //experience cards slider
-    let experienceSlider = [
+    //awards cards slider
+    let awardSlider = [
         {
             image: 'zycusmonthlyaward1.png'
         },
         {
-            image:'zycusmontlyaward2.png'
+            image: 'zycusmontlyaward2.png'
         }
     ];
-
+    
     const nextCursor = document.querySelector('.next');
-    const prevCursor = document.querySelector('.prev'); 
-    const awardCard = document.querySelector('.award-card');
+    const prevCursor = document.querySelector('.prev');
+    const awardCards = document.querySelector('.award-cards');
+    
+ // Create and append award cards
+    awardSlider.forEach((slide, index) => {
+        let card = document.createElement('div');
+        card.classList.add('award-card');
+        card.style.backgroundImage = `url('./assets/images/awardsandcert/${slide.image}')`;
+        if (index === 0) {
+            card.style.opacity = 1;
+            card.style.transform = 'translateX(0)';
+        } else {
+            card.style.opacity = 0;
+            card.style.transform = 'translateX(100%)';
+        }
+        awardCards.appendChild(card);
+    });
 
     let currentIndex = 0;
-    awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
+    const totalSlides = awardSlider.length;
 
-    nextCursor.addEventListener('click',()=>{
-        if(currentIndex < experienceSlider.length-1){
-            currentIndex++;
-            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
-        }
-        else {
-            currentIndex = 0;
-            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
-        }
+    function showSlide(index) {
+        const cards = document.querySelectorAll('.award-card');
+        
+        // Hide the current card and slide it to the left
+        cards[currentIndex].style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
+        cards[currentIndex].style.opacity = 0;
+        cards[currentIndex].style.transform = 'translateX(-100%)';
+        
+    
+        // Prepare the new card (position it off-screen to the right)
+        cards[index].style.transition = 'none'; // Disable transition for immediate positioning
+        cards[index].style.transform = 'translateX(100%)';
+        // Force reflow to apply the above style changes immediately
+        cards[index].offsetHeight; 
+        // Show the new card with a smooth transition
+        cards[index].style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
+        cards[index].style.opacity = 1;
+        cards[index].style.transform = 'translateX(0)';
+        
+        currentIndex = index;
+    }
+
+    nextCursor.addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % totalSlides;
+        showSlide(newIndex);
         console.log(currentIndex);
-    })
+    });
 
-    prevCursor.addEventListener('click',()=>{
-        if(currentIndex > 0){
-            currentIndex--;
-            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
-        }
-        else {
-            currentIndex = experienceSlider.length-1;
-            awardCard.style.backgroundImage = `url('./assets/images/awardsandcert/${experienceSlider[currentIndex].image}')`;
-        }
+    prevCursor.addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(newIndex);
         console.log(currentIndex);
-    })
+    });
 
+
+    //featured projects slider
+    let projectsSlider = [
+        {
+            image: 'css-loop-studios.png'
+        },
+        {
+            image: 'css-loop-studios.png'
+        }
+    ];
+    
+    
+    const projectcards = document.querySelector('.project-mockups');
+
+    // Create and append project cards
+    projectsSlider.forEach((slide, index) => {
+        let card = document.createElement('div');
+        card.classList.add('project-mockup');
+        let image = document.createElement('img');
+        image.src = `./assets/images/mockups/${slide.image}`;
+        card.appendChild(image);
+        if (index === 0) {
+            card.style.opacity = 1;
+            card.style.transform = 'translateX(0)';
+        } else {
+            card.style.opacity = 0;
+            card.style.transform = 'translateX(100%)';
+        }
+        projectcards.appendChild(card);
+    });
+
+    let currentProjectIndex = 0;
+    const totalProjectSlides = projectsSlider.length;
+
+    function showProjectSlide(index) {
+        const cards = document.querySelectorAll('.project-mockup');
+        console.log(currentProjectIndex,index);
+        
+        // Hide the current card and slide it to the left
+        cards[currentProjectIndex].style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
+        cards[currentProjectIndex].style.opacity = 0;
+        cards[currentProjectIndex].style.transform = 'translateX(-100%)';
+        
+    
+        // Prepare the new card (position it off-screen to the right)
+        cards[index].style.transition = 'none'; // Disable transition for immediate positioning
+        cards[index].style.transform = 'translateX(100%)';
+        // Force reflow to apply the above style changes immediately
+        cards[index].offsetHeight; 
+        // Show the new card with a smooth transition
+        cards[index].style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
+        cards[index].style.opacity = 1;
+        cards[index].style.transform = 'translateX(0)';
+        
+        currentProjectIndex = index;
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            const newIndex = (currentProjectIndex + 1) % totalProjectSlides;
+            showProjectSlide(newIndex);
+        }, 3000); // Change slide every 3 seconds
+    }
+    
+        startAutoSlide();
 })
 
 

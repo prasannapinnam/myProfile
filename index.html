@@ -36,10 +36,11 @@
         />
       </div>
       <div id="menu-bar">
-        <div class="menu-item home"><a href="#">home</a></div>
-        <div class="menu-item aboutme"><a href="#about-me">aboutme</a></div>
-        <div class="menu-item projects"><a href="">projects</a></div>
-        <div class="menu-item hireme"><a href="">hireme!</a></div>
+        <div class="menu-item home"><a href="#about-me">home</a></div>
+        <div class="menu-item aboutme"><a href="#experience">experience</a></div>
+        <div class="menu-item projects"><a href="#projects">projects</a></div>
+        <div class="menu-item projects"><a href="#awards">awards</a></div>
+        <div class="menu-item hireme"><a href="#contact-me">hireme!</a></div>
       </div>
     </nav>
     <section id="about-me">
@@ -55,6 +56,8 @@
           id="img_small"
         />
       </div>
+      <div class="about-me-title">About-me</div>
+      <div class="about-me-desc">quas animi id est earum similique. Eum vero atque, ipsa aut voluptates laborum, laudantium in illo reiciendis, eius non placeat neque eveniet? Harum quae labore aperiam atque corrupti hic ut ipsa, fuga sit? Odit esse necessitatibus maiores molestiae eaque! Excepturi quaerat dolor assumenda! Sint id delectus atque dolores libero vel modi, earum culpa nisi, laborum excepturi, cumque a harum. Explicabo quam officia odio vel rem ducimus nihil quis, excepturi, qui in corrupti illo minima veritatis natus fugit? Quis vero sunt modi. Iste molestias odit deserunt quia voluptatibus eum, suscipit mollitia natus fugiat, accusamus libero aliquid quis ex? Sapiente porro voluptas itaque hic.</div>
     </section>
     <!-- skills section -->
     <section id="skills" class="section-margin">
@@ -88,14 +91,14 @@
     <section id="awards" class="section-margin">
       <h2 class="section-header">awards and certifications</h2>
       <div class="award-cards">
-        <div class="award-card card"></div>
+        <!-- <div class="award-card card"></div> -->
       </div>
       <button class="carousel-control prev" ><i class="fa-solid fa-circle-chevron-left"></i></button>
       <button class="carousel-control next" ><i class="fa-solid fa-circle-chevron-right"></i></button>
     </section>
 
     <!-- project types section -->
-    <h2 class="project-type-btn">checkout my projects</h2>
+    <h2 class="section-header" id="projects">checkout my projects</h2>
     <section id="project-type">
       <div class="project-type-item item-1">
         <a href="#">
@@ -123,11 +126,27 @@
         </a>
       </div>
     </section>
-    <img
-      src="./assets/images/mockups/css-loop-studios.png"
-      alt=""
-      class="mockup"
-    />
+
+    <!-- featured projects -->
+    <section id="featured-projects">
+      <h2 class="section-header">featured-projects</h2>
+      <div class="project-mockups">
+          <!-- <div class="project-mockup mockup-1">
+            <img src="./assets/images/mockups/css-loop-studios.png" alt="loop-studios">
+          </div> -->
+      </div>
+    </section>
+
+    <footer id="contact-me">
+      <div class="footer-logo">
+        <img src="./assets/images/mylogopurple.png" alt="logo">
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/lakshmi-prasanna-pinnam-890952170/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/prasannapinnam" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://hashnode.com/@LakshmiJSBlogs" target="_blank"><i class="fa-brands fa-hashnode"></i></a>
+      </div>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
