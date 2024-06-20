@@ -104,6 +104,8 @@ document.addEventListener("DOMContentLoaded",() => {
         experienceCards.appendChild(card);
     }
 
+    //experience cards fillup done
+
     //awards cards slider
     let awardSlider = [
         {
@@ -170,6 +172,7 @@ document.addEventListener("DOMContentLoaded",() => {
         console.log(currentIndex);
     });
 
+    //awards card slider end
 
     //featured projects slider
     let projectsSlider = [
@@ -235,6 +238,8 @@ document.addEventListener("DOMContentLoaded",() => {
     }
     
         startAutoSlide();
+
+    //featured projects slider end
 })
 
 
