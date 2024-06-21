@@ -538,12 +538,14 @@ footer {
 
   .prev {
     font-size: 15px;
-    left: 22px;
+    left: 9px;
+    background-color: var(--page-background);
   }
 
   .next {
     font-size: 15px;
-    right: 22px;
+    right: 9px;
+    background-color: var(--page-background);
   }
 
   .award-cards {
