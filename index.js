@@ -240,6 +240,20 @@ document.addEventListener("DOMContentLoaded",() => {
         startAutoSlide();
 
     //featured projects slider end
+
+
+    //open menu on hamburger click
+    const hamburger = document.querySelector('.hamburger');
+    const menubar = document.getElementById('menu-bar');
+    const menuitems = document.querySelectorAll('.menu-item');
+    
+    hamburger.addEventListener('click',() => {
+        menubar.classList.toggle('show');
+        menuitems.forEach((item) => {
+            item.classList.toggle('change-nav-item-size');
+        })
+
+    })
 })
 
 
