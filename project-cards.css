@@ -1,0 +1,90 @@
+@import url(./style.css);
+
+.projects-nav {
+  margin-bottom: 20px !important;
+}
+
+#cards-container {
+  margin: 5vh 5vw 15vh 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.home {
+  height: 40px;
+  align-self: center;
+}
+
+.home:hover {
+  padding-top: 13px;
+}
+
+.project-card {
+  width: 45%;
+  background-color: var(--white-color);
+  border-radius: 10px;
+}
+
+.card-header {
+  color: var(--white-color);
+  background-color: var(--dark-purple);
+  border-radius: 10px 10px 0 0;
+  height: 50px;
+  border-bottom: 2px solid rgba(88, 87, 87, 0.3);
+  text-align: center;
+  padding-top: 10px;
+  font-family: var(--league-spartan);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.card-image {
+  height: 45vh;
+  border-bottom: 2px solid rgba(88, 87, 87, 0.3);
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.skills {
+  margin: 20px 0 20px 8%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.skills p {
+  color: var(--page-background);
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 2px solid #808080;
+  font-family: var(--libre-baskerville);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-links a {
+  background-color: var(--dark-purple);
+  color: var(--white-color);
+  width: 35%;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-family: var(--libre-baskerville);
+}
+
+.card-links a:hover {
+  background-color: var(--page-background);
+}
