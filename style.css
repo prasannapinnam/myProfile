@@ -95,6 +95,22 @@ a {
   display: none;
 }
 
+.show {
+  display: block !important;
+  position: absolute;
+  right: 17vw;
+  top: 13vh;
+  background-color: #810ca8;
+  width: 100px !important;
+  border-radius: 5px;
+}
+
+.change-nav-item-size {
+  box-shadow: none;
+  border: none;
+  margin-bottom: 10px;
+}
+
 /*navbar done*/
 
 /*about me section*/
