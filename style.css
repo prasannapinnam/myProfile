@@ -499,7 +499,8 @@ footer {
   }
 
   /*footer*/
-  footer {
+  #contact-me {
+    padding-right: 10vw;
     justify-content: space-around;
   }
 
@@ -514,13 +515,18 @@ footer {
   .fa-brands {
     font-size: 25px;
   }
+
+  .footer-links {
+    width: 45%;
+    justify-self: flex-end;
+  }
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
   /*experience*/
   .experience-image {
     width: 100%;
-    height: 45vh;
+    height: 20vh;
   }
 
   /*awards*/
@@ -532,18 +538,16 @@ footer {
 
   .prev {
     font-size: 15px;
-    left: 20px;
-    background-color: var(--page-background);
+    left: 22px;
   }
 
   .next {
     font-size: 15px;
-    right: 20px;
-    background-color: var(--page-background);
+    right: 22px;
   }
 
   .award-cards {
-    height: 65vh;
+    height: 30vh;
   }
 }
 
@@ -551,12 +555,12 @@ footer {
   /*experience*/
   .experience-image {
     width: 100%;
-    height: 55vh;
+    height: 23vh;
   }
 
   /*awards*/
   .award-cards {
-    height: 85vh;
+    height: 35vh;
   }
 
   .award-card {
@@ -568,13 +572,13 @@ footer {
 
   .prev {
     font-size: 15px;
-    left: 20px;
+    left: 9px;
     background-color: var(--page-background);
   }
 
   .next {
     font-size: 15px;
-    right: 20px;
+    right: 9px;
     background-color: var(--page-background);
   }
 }
@@ -583,12 +587,12 @@ footer {
   /*experience*/
   .experience-image {
     width: 100%;
-    height: 65vh;
+    height: 30vh;
   }
 
   /*awards*/
   .award-cards {
-    height: 80vh;
+    height: 50vh;
   }
 
   .award-card {
@@ -599,13 +603,13 @@ footer {
 
   .prev {
     font-size: 15px;
-    left: 20px;
+    left: 11px;
     background-color: var(--page-background);
   }
 
   .next {
     font-size: 15px;
-    right: 20px;
+    right: 11px;
     background-color: var(--page-background);
   }
 }
@@ -614,12 +618,12 @@ footer {
   /*experience*/
   .experience-image {
     width: 100%;
-    height: 75vh;
+    height: 35vh;
   }
 
   /*awards*/
   .award-cards {
-    height: 120vh;
+    height: 55vh;
   }
 
   .award-card {
@@ -645,7 +649,7 @@ footer {
   /*experience*/
   .experience-image {
     width: 100%;
-    height: 85vh;
+    height: 20vh;
   }
 
   /*awards*/
@@ -653,6 +657,10 @@ footer {
   .award-card {
     border: 0;
     outline: 0;
+  }
+
+  .project-mockups {
+    height: 500px;
   }
 }
 
@@ -660,7 +668,7 @@ footer {
   /*experience*/
   .experience-image {
     width: 100%;
-    height: 95vh;
+    height: 35vh;
   }
 
   /*awards*/
@@ -668,6 +676,10 @@ footer {
   .award-card {
     border: 0;
     outline: 0;
+  }
+
+  .project-mockups {
+    height: 500px;
   }
 }
 
