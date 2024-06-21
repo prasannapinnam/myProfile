@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 40px;
 }
 
 .home {
@@ -87,4 +88,85 @@
 
 .card-links a:hover {
   background-color: var(--page-background);
+}
+
+/* Media query for devices with a max-width of 599px */
+@media (max-width: 599px) {
+  .project-card {
+    width: 100%;
+  }
+
+  .card-header {
+    font-size: 24px;
+  }
+
+  .card-image {
+    height: 30vh;
+  }
+
+  .skills {
+    margin-left: 3%;
+  }
+
+  .card-links a {
+    width: 45%;
+    font-size: 10px;
+  }
+}
+
+/* Media query for devices with a min-width of 600px and max-width of 899px */
+@media (min-width: 600px) and (max-width: 899px) {
+  .project-card {
+    width: 100%;
+  }
+
+  .card-header {
+    font-size: 26px;
+  }
+
+  .card-image {
+    height: 35vh;
+  }
+
+  .card-links a {
+    width: 40%;
+  }
+}
+
+/* Media query for devices with a min-width of 1500px and max-width of 1799px */
+@media (min-width: 1500px) and (max-width: 1799px) {
+  .project-card {
+    width: 45%;
+  }
+
+  .card-header {
+    font-size: 32px;
+  }
+
+  .card-image {
+    height: 50vh;
+  }
+
+  .card-links a {
+    width: 30%;
+  }
+}
+
+/* Media query for devices with a min-width of 1800px and max-width of 2000px */
+@media (min-width: 1800px) and (max-width: 2000px) {
+  .project-card {
+    width: 45%;
+  }
+
+  .card-header {
+    font-size: 34px;
+  }
+
+  .card-image {
+    height: 55vh;
+  }
+
+  .card-links a {
+    width: 30%;
+  }
 }
