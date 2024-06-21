@@ -252,8 +252,10 @@ document.addEventListener("DOMContentLoaded",() => {
         menuitems.forEach((item) => {
             item.classList.toggle('change-nav-item-size');
         })
-
     })
+
+
+    
 })
 
 
