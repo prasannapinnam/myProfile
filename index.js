@@ -255,7 +255,28 @@ document.addEventListener("DOMContentLoaded",() => {
     })
 
 
-    
+   //project-types selection and storage in local-storage
+   const projecttypes = document.querySelectorAll('.project-type-item');
+
+   projecttypes[0].addEventListener('click',() => {
+    localStorage.setItem('selectedProjectType', 'css');
+   });
+
+   projecttypes[1].addEventListener('click',() => {
+    localStorage.setItem('selectedProjectType', 'vanillaJs');
+   });
+
+   projecttypes[2].addEventListener('click',() => {
+    localStorage.setItem('selectedProjectType', 'angular');
+   });
+
+   projecttypes[3].addEventListener('click',() => {
+    localStorage.setItem('selectedProjectType', 'react');
+   });
+
+   projecttypes[4].addEventListener('click',() => {
+    localStorage.setItem('selectedProjectType', 'fullstack');
+   });
 })
 
 
