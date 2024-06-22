@@ -36,10 +36,10 @@ time taken to build this website : 3.5 days [along with media queries,javascript
 - fontawesome icons
 - implementing slider,hamburger menu via js [autoslide,manualslider]
 - Order of Inclusion of style sheets:
-  **_Base Styles_**: Include base or reset stylesheets first.
-  **_Library Styles_**: Next, include stylesheets from libraries e.g., Bootstrap, Foundation).
-  **_Component Styles_**: Include styles specific to components (buttons, forms, etc.) afterward.
-  **_Custom Styles_**: Your own custom styles should come last, allowing you to override any previous styles.
+   - **_Base Styles_**: Include base or reset stylesheets first.
+   - **_Library Styles_**: Next, include stylesheets from libraries e.g., Bootstrap, Foundation).
+   - **_Component Styles_**: Include styles specific to components (buttons, forms, etc.) afterward.
+   - **_Custom Styles_**: Your own custom styles should come last, allowing you to override any previous styles.
 - we cannot access index.html from project-cards.js so store whatever you want in localstorage on an action in index.html and access them in project-cards.js via localstorage
 
 ### project Screenshot
