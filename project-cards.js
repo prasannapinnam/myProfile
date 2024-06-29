@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded",() => {
             gitlink: 'css-crypto-landing-page',
             deployLink: 'https://css-crypto-landing-page.netlify.app/',
             type:'css'
+        },
+        {
+            title:'paytm clone',
+            image:'bootstrap-paytm-clone.png',
+            skills: ['html','scss','js','bootstrap'],
+            gitlink: 'bootstrap-paytm-clone',
+            deployLink: 'https://prasannapinnam.github.io/bootstrap-paytm-clone/',
+            type:'css'
         }
     ]
 
