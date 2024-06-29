@@ -180,7 +180,13 @@ document.addEventListener("DOMContentLoaded",() => {
             image: 'css-loop-studios.png'
         },
         {
-            image: 'css-loop-studios.png'
+            image: 'css-streetstyle-mockup.png'
+        },
+        {
+            image: 'css-crypto-mockup.png'
+        },
+        {
+            image: 'bs-paytm.png'
         }
     ];
     
